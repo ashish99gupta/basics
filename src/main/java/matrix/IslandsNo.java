@@ -58,8 +58,6 @@ public class IslandsNo {
                   0 0 0 0 1 }
    */
   private static MatrixNode[][] createMatix() {
-    int row = 4;
-    int col = 5;
     MatrixNode[][] matrix = new MatrixNode[row][col];
     matrix[0][0] = new MatrixNode(0);
     matrix[0][1] = new MatrixNode(0);

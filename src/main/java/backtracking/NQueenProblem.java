@@ -2,7 +2,7 @@ package backtracking;
 
 public class NQueenProblem {
   public static void main(String[] args) {
-    int q = 4;
+    int q = 8;
     int[][] board = new int[q][q];
     Boolean result = solveNQueen(board, 0);
     if (result==true){
@@ -10,6 +10,7 @@ public class NQueenProblem {
     }
     System.out.println(result);
   }
+
   private static void displayMatrix(int[][] palin) {
     for (int i = 0; i < palin.length; i++) {
       for (int j = 0; j < palin[0].length; j++) {
