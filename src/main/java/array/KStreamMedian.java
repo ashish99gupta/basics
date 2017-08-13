@@ -41,5 +41,5 @@ public class KStreamMedian {
     } else {
       minHeap.add(val);
     }
-  }
+  } 
 }
