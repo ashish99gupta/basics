@@ -8,14 +8,15 @@ public class KMP {
     String p = "AABA";
     char[] txt = s.toCharArray();
     char[] pat = p.toCharArray();
-    int[] lps = kmp.longestPrefixSuffix(s.toCharArray());
+    int[] lps = kmp.longestPrefixSuffix(p.toCharArray());
     for (int i = 0,j=0; i < txt.length;) {
       if (txt[i] == pat[j]){
         i++;
         j++;
-      }else {    //because i cann count those chars which are in suffix of already matched in the prefix of next window
+      }else {    //because i can count those chars which are in suffix of already matched in the prefix of next window
         if (j!=0){
-          j= lps[j-1];
+          j= lps[j-1];  // lps[j] = k that means first k letters are same as last k letters we compared,
+                       // now go past k chars to search and not from the starting
         }else {
           i++;
         }
@@ -29,6 +30,11 @@ public class KMP {
     }
   }
 
+  // lps[i] = the longest proper prefix of pat[0..i]
+  //             which is also a suffix of pat[0..i].
+  /*
+  AABAACAABAAC = {0,1,0,1,2,0,1,2,3,4,5,6}
+   */
   public int[] longestPrefixSuffix(char[] charArray){
     int[] lps = new int[charArray.length];
     lps[0] = 0;
@@ -39,10 +45,19 @@ public class KMP {
         lps[len] = i;
         len++;
       }else {
-        lps[len] = lps[len-1];
-        len++;
+        if (i!=0){
+          i = lps[i-1];
+        }else {
+          lps[len] = i;
+          len++;
+
+        }
       }
     }
+
+    for (int x : lps)
+      System.out.printf(x +" ");
+    System.out.println();
     return lps;
    }
 }
