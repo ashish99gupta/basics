@@ -1,4 +1,4 @@
-package FlipkartPuzzle;
+package interview.FlipkartPuzzle;
 
 import java.util.ArrayList;
 import java.util.HashSet;

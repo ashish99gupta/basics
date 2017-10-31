@@ -1,4 +1,4 @@
-package FlipkartPuzzle;
+package interview.FlipkartPuzzle;
 
 public class CabManagementPortal {
 

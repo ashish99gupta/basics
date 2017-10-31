@@ -1,4 +1,4 @@
-package others;
+package graph;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -42,8 +42,6 @@ public class KnightWalk {
       }
     }
   }
-
-
 
   private static void DFS(ChessNode[][] board, int row, int col, int minHops) {
     if (row == 7 && col == 7) {

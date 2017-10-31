@@ -16,7 +16,8 @@ public class DecodingArray {
   }
 
   private void printdecodeArray(int[] arr, int i, int n) {
-    printdecodeArray(arr, 1,n-1);count += countDecodeArray(arr,n-2);
+    printdecodeArray(arr, 1,n-1);
+    count += countDecodeArray(arr,n-2);
 
     if ((arr[n-2] == 1 || arr[n-2] == 2 )&& (arr[n-1] < 7)){
       printdecodeArray(arr, 2,n-2);

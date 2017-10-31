@@ -1,6 +1,7 @@
 package tree;
 
 public class TreeQuest {
+    private TreeNode head;
 
     public static void main(String[] args) {
         TreeNode tree = buildTree1();
@@ -10,7 +11,18 @@ public class TreeQuest {
         System.out.println(maxLen);
         int immaxLen = immediateLongestConsLength(tree, 1, 1);
         System.out.println(immaxLen);*/
+    }
 
+    private void treeToDLL(TreeNode root){
+        if (root == null)
+            return;
+
+        treeToDLL(root.right);
+        root.right = head;
+        if (head != null)
+            head.left = root;
+        head = root;
+        treeToDLL(root.left);
     }
 
     private static Boolean checkPreOrder(TreeNode root, int[] arr,int i, int len){

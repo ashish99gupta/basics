@@ -1,4 +1,4 @@
-package FlipkartPuzzle;
+package interview.FlipkartPuzzle;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

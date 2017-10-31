@@ -8,16 +8,16 @@ public class UncommonChars {
   static UncommonChars uncommonChars = new UncommonChars();
 
   public static void main(String[] args) {
-    //String s1 = "characters";
-    //String s2 = "alphabets";
+    String s1 = "characters";
+    String s2 = "alphabets";
     Scanner sc = new Scanner(System.in);
     long T = sc.nextLong();
     if(T<0 || T>100000){
       return;
     }
     while(T>0){
-      String s1 = sc.next();
-      String s2 = sc.next();
+      //String s1 = sc.next();
+      //String s2 = sc.next();
       int[] arr = new int[26];
 
       for (char c : s1.toCharArray()) {

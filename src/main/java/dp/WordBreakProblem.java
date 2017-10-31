@@ -62,7 +62,6 @@ public class WordBreakProblem {
         }
       }
     }
-
     MatrixUtil.display2dMatrix(mat);
     System.out.println();
   }
